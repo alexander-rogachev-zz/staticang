@@ -1,8 +1,11 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="myApp">
 <head lang="en">
+    <script type="text/javascript" src="js/angular.min.js"></script>
+    <script type="text/javascript" src="js/angular-route.js"></script>
     <script type="text/javascript" src="js/bootstrap.min.js"></script>
     <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="app.js"></script>
     <link rel="stylesheet" href="css/bootstrap.min.css"/>
     <link rel="stylesheet" href="css/style.css"/>
     <meta charset="UTF-8">
@@ -18,16 +21,57 @@
     </div>
 
     <div class="row" id="content">
-        <div class="navbar">
-            <div class="navbar-inner">
-                <a class="brand" href="#">Title</a>
-                <ul class="nav">
-                    <li><a href="#events">Events</a></li>
-                    <li><a href="#organisations">Organisations</a></li>
-                    <li><a href="#contacts">Contacts</a></li>
-                    <li><a href="#statistic">Statistic</a></li>
-                    <li><a href="#users">Users</a></li>
-                </ul>
+        <div class="span12">
+            <div class="navbar">
+                <div class="navbar-inner">
+                    <a class="brand" href="#">Title</a>
+                    <ul class="nav">
+                        <li><a href="#/events">Events</a></li>
+                        <li><a href="#/organisations">Organisations</a></li>
+                        <li><a href="#/contacts">Contacts</a></li>
+                        <li><a href="#/statistic">Statistic</a></li>
+                        <li><a href="#/users">Users</a></li>
+                    </ul>
+                </div>
+            </div>
+            <!--  <div class="span3">
+                  <form class="form-signin">
+                      <h2 class="form-signin-heading">Please sign in</h2>
+                      <input type="text" class="input-block-level" placeholder="Email address">
+                      <input type="password" class="input-block-level" placeholder="Password">
+                      <label class="checkbox">
+                          <input type="checkbox" value="remember-me"> Remember me
+                      </label>
+                      <button class="btn btn-large btn-primary" type="submit">Sign in</button>
+                  </form>
+              </div>-->
+            <div ng-view></div>
+            <div ng-controller="LoginController as contLogin">
+                <form class="form-horizontal" ng-show="contLogin.getLogin()" novalidate ng-submit="contLogin.login()">
+                    <div class="control-group">
+                        <h2 class="">Please sign in</h2>
+                    </div>
+                    <div class="control-group">
+                        <label class="control-label" for="inputEmail">Email</label>
+                        <div class="controls">
+                            <input type="text" id="inputEmail" placeholder="Email">
+                        </div>
+                    </div>
+                    <div class="control-group">
+                        <label class="control-label" for="inputPassword">Password</label>
+                        <div class="controls">
+                            <input type="password" id="inputPassword" placeholder="Password">
+                        </div>
+                    </div>
+                    <div class="control-group">
+                        <div class="controls">
+                            <label class="checkbox">
+                                <input type="checkbox"> Remember me
+                            </label>
+                            <button type="submit" class="btn btn-primary" ng-click="contLogin.login()">Sign in</button>
+                        </div>
+                    </div>
+                </form>
             </div>
         </div>
     </div>

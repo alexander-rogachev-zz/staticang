@@ -1,10 +1,38 @@
-<!DOCTYPE html>
-<html>
-<head lang="en">
-    <meta charset="UTF-8">
-    <title></title>
-</head>
-<body>
-
-</body>
-</html>
+<div ng-controller="EventController as eventStore">
+    <a href="#/newEvent">New event</a>
+    <table  class="table table-striped table-bordered">
+        <thead>
+        <tr>
+            <th>
+                <a href="" ng-click="eventStore.order('eventDate')">Event date</a>
+                <span class="sortorder" ng-show="eventStore.predicate === 'eventDate'" ng-class="{reverse:eventStore.reverse}"></span>
+            </th>
+            <th>
+                <a href="" ng-click="eventStore.order('organisation')">Organisation</a>
+                <span class="sortorder" ng-show="eventStore.predicate === 'organisation'" ng-class="{reverse:eventStore.reverse}"></span>
+            </th>
+            <th>
+                <a href="" ng-click="eventStore.order('contact')">Contact</a>
+                <span class="sortorder" ng-show="eventStore.predicate === 'contact'" ng-class="{reverse:eventStore.reverse}"></span>
+            </th>
+            <th>
+                <a href="" ng-click="eventStore.order('eventType')">Event type</a>
+                <span class="sortorder" ng-show="eventStore.predicate === 'eventType'" ng-class="{reverse:eventStore.reverse}"></span>
+            </th>
+            <th>
+                <a href="" ng-click="eventStore.order('comment')">Comment</a>
+                <span class="sortorder" ng-show="eventStore.predicate === 'comment'" ng-class="{reverse:eventStore.reverse}"></span>
+            </th>
+        </tr>
+        </thead>
+        <tbody ng-repeat="event in eventStore.events | orderBy:eventStore.predicate:eventStore.reverse">
+        <tr>
+            <td>{{event.dateTime | date}}</td>
+            <td>{{event.organisation}}</td>
+            <td>{{event.contact}}</td>
+            <td>{{event.eventType}}</td>
+            <td>{{event.comment}}</td>
+        </tr>
+        </tbody>
+    </table>
+</div>

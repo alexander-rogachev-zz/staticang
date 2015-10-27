@@ -1,0 +1,59 @@
+<div ng-controller="EventController as eventStore">
+    <form class="form-horizontal">
+        <h2>Add event</h2>
+        <div class="control-group">
+            <label class="control-label" for="theme">Theme</label>
+            <div class="controls">
+                <input type="text" id="theme" placeholder="Theme" ng-model="eventStore.event.theme">
+            </div>
+        </div>
+        <div class="control-group">
+            <label class="control-label" for="subject">Subject</label>
+            <div class="controls">
+                <input type="text" id="subject" placeholder="Subject" ng-model="eventStore.event.subject">
+            </div>
+        </div>
+        <div class="control-group">
+            <label class="control-label" for="description">Description</label>
+            <div class="controls">
+                <textarea rows="6" id="description" placeholder="Description" ng-model="eventStore.event.description"></textarea>
+            </div>
+        </div>
+        <div class="control-group">
+            <label class="control-label" for="eventDate">Event Date Time</label>
+            <div class="controls">
+                <input type="date" id="eventDate" placeholder="Event Date Time" ng-model="eventStore.event.eventDate">
+            </div>
+        </div>
+        <div class="control-group">
+            <label class="control-label" for="eventType">Event Type</label>
+            <div class="controls">
+                <select id="eventType" ng-model="eventStore.event.eventType">
+                    <option ng-repeat="eventType in eventStore.eventTypes" value="{{eventType}}">{{eventType}}</option>
+                </select>
+            </div>
+        </div>
+        <div class="control-group">
+            <div class="controls">
+                <label class="checkbox">
+                    <input type="checkbox" ng-model="eventStore.event.isImportant"> Important
+                </label>
+            </div>
+            <div class="controls">
+                <label class="checkbox">
+                    <input type="checkbox" ng-model="eventStore.event.isCalendar"> Calendar
+                </label>
+            </div>
+            <div class="controls">
+                <label class="checkbox" ng-model="eventStore.event.isCopyToCalendar">
+                    <input type="checkbox"> Copy to Google calendar
+                </label>
+            </div>
+        </div>
+        <div class="control-group">
+            <div class="controls">
+                <button type="submit" class="btn btn-primary" ng-click="eventStore.addEvent()">Add event</button>
+            </div>
+        </div>
+    </form>
+</div>
