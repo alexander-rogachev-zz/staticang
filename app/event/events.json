@@ -1,41 +1,41 @@
 [
   {
-    "dateTime": "2013-07-17 12:00:00",
+    "eventDate": "2013-07-17 12:00:00",
     "organisation": "Test1",
     "contact": "Test1",
     "eventType": "TRY",
     "comment":"Test1 comment"
   },
   {
-    "dateTime": "2014-08-17 12:34:00",
+    "eventDate": "2014-08-17 12:34:00",
     "organisation": "Test2",
     "contact": "Test2",
     "eventType": "TRY",
     "comment":"Test2 comment"
   },
   {
-    "dateTime": "2015-10-17 14:09:00",
+    "eventDate": "2015-10-17 14:09:00",
     "organisation": "Test3",
     "contact": "Test3",
     "eventType": "TRY",
     "comment":"Test3 comment"
   },
   {
-    "dateTime": "2014-01-17 10:23:00",
+    "eventDate": "2014-01-17 10:23:00",
     "organisation": "Test4",
     "contact": "Test4",
     "eventType": "TRY",
     "comment":"Test4 comment"
   },
   {
-    "dateTime": "2013-11-14 02:48:00",
+    "eventDate": "2013-11-14 02:48:00",
     "organisation": "Test5",
     "contact": "Test5",
     "eventType": "TRY",
     "comment":"Test5 comment"
   },
   {
-    "dateTime": "2013-09-23 03:11:00",
+    "eventDate": "2013-09-23 03:11:00",
     "organisation": "Test6",
     "contact": "Test6",
     "eventType": "TRY",

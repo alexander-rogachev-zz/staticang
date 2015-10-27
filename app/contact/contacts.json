@@ -1,0 +1,35 @@
+[
+  {
+    "title": "title1",
+    "contact": "contact1",
+    "organisation": "organisation1",
+    "phoneNumber": "+712345656656",
+    "mobileNumber": "+748923483999",
+    "email": "test@test.se",
+    "secondEmail": "test2@test.se",
+    "skype": "contact1_skype",
+    "sendEmails": "true"
+  },
+  {
+    "title": "title2",
+    "contact": "contact2",
+    "organisation": "organisation2",
+    "phoneNumber": "+712345656656",
+    "mobileNumber": "+748923483999",
+    "email": "test@test.se",
+    "secondEmail": "test2@test.se",
+    "skype": "contact2_skype",
+    "sendEmails": "true"
+  },
+  {
+  "title": "title3",
+  "contact": "contact3",
+  "organisation": "organisation3",
+  "phoneNumber": "+712345656656",
+  "mobileNumber": "+748923483999",
+  "email": "test@test.se",
+  "secondEmail": "test3@test.se",
+  "skype": "contact3_skype",
+  "sendEmails": "true"
+}
+]

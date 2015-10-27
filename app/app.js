@@ -34,6 +34,27 @@ angular.module('myApp', [
             this.events.push(this.event)
         }
     }])
+    .controller('ContactController', ['$http', function($http) {
+        var store = this;
+        store.contacts = [];
+        $http.get('contact/contacts.json').success(function(data) {
+            store.contacts = data;
+        });
+        this.contact = {};
+        console.log('Init ContactController');
+        this.predicate = 'title';
+        this.reverse = true;
+        this.order = function(predicate) {
+            this.reverse = (this.predicate === predicate) ? !this.reverse : false;
+            this.predicate = predicate;
+            console.log('predicate = ' + this.predicate + '; reverse = ' + this.reverse);
+        };
+
+        this.addContact = function() {
+            console.log('Add Contact :' + this.contact);
+            this.contacts.push(this.contact)
+        }
+    }])
     .controller('LoginController', function() {
         console.log('Init LoginController');
 

@@ -27,7 +27,7 @@
         </thead>
         <tbody ng-repeat="event in eventStore.events | orderBy:eventStore.predicate:eventStore.reverse">
         <tr>
-            <td>{{event.dateTime | date}}</td>
+            <td>{{event.eventDate | date}}</td>
             <td>{{event.organisation}}</td>
             <td>{{event.contact}}</td>
             <td>{{event.eventType}}</td>
